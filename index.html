@@ -8,93 +8,44 @@
     <meta name="description" content="The life of doggo.">
     <meta name="author" content="Aprile Bansil">
     <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&effect=anaglyph" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <section class ="nav">
-    </section>
+  <div id="overlay" class="hide">
+      <div id="doggoimgs">
+        <img class="bottdoggoimg2" src="images/corgiheader2.png" alt="doggo2">
+        <img class="topdoggoimg" src="images/corgiheader.png" alt="doggo">
+      </div>
 
-  <section class="top">
-    <img class="doggo" src="images/corgiheader.png" alt="doggo">
-    <h3>The Life of</h3>
-    <h2>Doggo</h2>
-  </section>
-  </header>
+      <div class="title">
+          <label class="font-effect-anaglyph" for="the-life-of">THE LIFE OF</label>
+      </div>
 
+          <div class="input">
+            <select name="doggo-type">
+              <option value="doggo">doggo</option>
+              <option value="dog">dog</option>
+              <option value="dogue">dogue</option>
+              <option value="dawg">dawg</option>
+            </select>
 
-<section class="feed">
+            <button id="gobtn" type="button" name="button">GO</button>
+
+          </div>
+    </div>
+
+<div class="hide">
   <div id="instafeed"></div>
-  <script src="instafeed.js-master/instafeed.min.js"></script>
-  <script type="text/javascript">
-    var Feed = new Instafeed({
-      get: 'tagged',
-      tagName: 'corgi',
-      userId: '2066156089',
-      accessToken: '193611173.ba4c844.abff80f8fa474321aa2c7a9fa4ba6969',
-      sortBy: 'most-recent',
-      limit: '100'
-    });
-    Feed.run();
-  </script>
-</section>
+</div>
 
-<!-- this was a test to get corgi user and failed -->
-  <!-- <section class="feed">
-    <div id="instafeed"></div>
-    <script src="instafeed.js-master/instafeed.min.js"></script>
-    <script type="text/javascript">
-      var Feed = new Instafeed({
-        get: 'user',
-        userId: '2066156089',
-        clientId: 'a64eafd142f041ecb4d738f0b8bba140',
-        accessToken: '193611173.1677ed0.df8fef22f7ea499c8112c9ba8a6cec39',
-        filter: function(image) {
-          return image.tags.indexOf('corgi') >=0;
-        }
-        // resolution: 'standard_resolution',
-        // template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /></a>',
-        // sortBy: 'most-recent',
-        // limit: 8,
-        // links: false
-      });
-      Feed.run();
-    </script>
-  </section> -->
-
-<!-- this works for my own feed
-<section class="feed">
-  <div id="instafeed"></div>
-
-  <script src="instafeed.js-master/instafeed.min.js"></script>
-  <script type="text/javascript">
-    var userFeed = new Instafeed({
-      get: 'user',
-      userId: '193611173',
-      clientId: 'a64eafd142f041ecb4d738f0b8bba140',
-      accessToken: '193611173.1677ed0.df8fef22f7ea499c8112c9ba8a6cec39',
-      resolution: 'thumbnail',
-      template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /></a>',
-      sortBy: 'most-recent',
-      limit: 8,
-      links: false
-    });
-    userFeed.run();
-
-  </script>
-</section> -->
-
-  <script
+<script
   src="https://code.jquery.com/jquery-3.2.1.slim.js"
   integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg="
   crossorigin="anonymous"></script>
-  <!-- <script src="script.js"></script> -->
-  <!-- <script type="text/javascript" src="instafeed.js-master/instafeed.min.js"></script> -->
-  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script> -->
+<script src="js/script.js"></script>
 
-
-
-
+</header>
 </body>
 </html>
