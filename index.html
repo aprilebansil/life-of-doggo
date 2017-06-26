@@ -38,6 +38,20 @@
 
 <div class="hide">
   <div id="instafeed"></div>
+    <script src="instafeed.js-master/instafeed.min.js"></script>
+    <script type="text/javascript">
+      var Feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'corgi',
+        userId: '2066156089',
+        accessToken: '193611173.ba4c844.abff80f8fa474321aa2c7a9fa4ba6969',
+        sortBy: 'most-recent',
+        limit: '100'
+      });
+      Feed.run();
+    </script>
+
+
 </div>
 
 <script
