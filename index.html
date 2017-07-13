@@ -13,16 +13,21 @@
 
 <body>
   <header>
-  <div id="overlay" class="hide">
+
+<!-- <div class="hide"> -->
+  <div id="overlay">
+  <div id="right">
       <div id="doggoimgs">
         <img class="bottdoggoimg2" src="images/corgiheader2.png" alt="doggo2">
         <img class="topdoggoimg" src="images/corgiheader.png" alt="doggo">
       </div>
+  </div>
 
       <div class="title">
           <label class="font-effect-anaglyph" for="the-life-of">THE LIFE OF</label>
       </div>
 
+  <div id="left">
           <div class="input">
             <select name="doggo-type">
               <option value="doggo">doggo</option>
@@ -31,14 +36,16 @@
               <option value="dawg">dawg</option>
             </select>
 
+  </div>
+<!-- </div> -->
             <button id="gobtn" type="button" name="button">GO</button>
 
           </div>
     </div>
 
-<div class="hide">
+
   <div id="instafeed"></div>
-    <script src="instafeed.js-master/instafeed.min.js"></script>
+    <script src="js/instafeed.min.js"></script>
     <script type="text/javascript">
       var Feed = new Instafeed({
         get: 'tagged',
@@ -46,18 +53,17 @@
         userId: '2066156089',
         accessToken: '193611173.ba4c844.abff80f8fa474321aa2c7a9fa4ba6969',
         sortBy: 'most-recent',
-        limit: '100'
+        limit: '24'
       });
       Feed.run();
     </script>
 
 
-</div>
-
 <script
   src="https://code.jquery.com/jquery-3.2.1.slim.js"
   integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg="
   crossorigin="anonymous"></script>
+  <script src="js/instafeed.min.js"></script>
 <script src="js/script.js"></script>
 
 </header>

@@ -1,6 +1,9 @@
-$('#gobtn').on("click",function(){
-  $('.overlay').toggleClass('hide');
-});
+$(function(){
+  $('#gobtn').on("click",function(){
+    $('#overlay').toggleClass('hide');
+  });
+})
+
 
 // $('gobtn2').("click",function(){
 //   location.reload();

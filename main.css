@@ -18,9 +18,23 @@ html, body {
   background-color: #FBCEE5
 }
 
+/*Main Image, input and button*/
+
+
+#right {
+  float:right;
+  border: #000000 solid 1px;
+}
+
+#left {
+  float: left;
+  border: #000000 solid 1px;
+}
+
 .title {
-  display: flex;
-  flex-direction: row;
+  width: 200px;
+  text-align: left;
+  position: fixed;
 }
 
 label {
@@ -31,7 +45,6 @@ label {
   color: #FFFFE1;
   top: 100px;
   padding-left: 20px;
-  width: 400px;
 }
 
 .input {
@@ -52,7 +65,7 @@ select {
 #gobtn {
   font-family: 'Playfair Display:700', serif;
   font-size: 30px;
-  
+
   background-color: #11DF57;
   border: #10B355;
   height: 100px;
@@ -89,23 +102,19 @@ select {
   background-color: #10B355;
 }
 
-
-#doggoimgs {
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
 #doggoimgs img {
-  display: block;
-  width: 100%;
-  margin: 0;
-  position:absolute;
-  padding-left: 0px;
-  padding-top: 50px;
+  /*display: block;*/
+  right: 20px;
+  padding-top: 0px;
+  /*margin: 0;*/
+  /*position:absolute;*/
+  /*padding-left: 0px;*/
 }
 
 #doggoimgs img.topdoggoimg:hover {
   opacity:0;
+  padding-top: 5px;
+  right: 20px;
 }
 
 #instafeed {
@@ -114,6 +123,12 @@ select {
   top:-100vh;
   max-width: 100%;
   overflow-x: hidden;
+  padding-left: 50px;
+  padding-right: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 @media (min-width: 1440px) {
@@ -124,7 +139,7 @@ select {
     margin: 0;
     position:absolute;
     padding-left: 50px;
-    padding-top: 50px;
+    /*padding-top: 50px;*/
   }
 
   label {
