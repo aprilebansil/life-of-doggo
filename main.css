@@ -9,7 +9,7 @@ html, body {
 }
 
 #overlay {
-  height: 1080px;
+  height: 100%;
   width: 100%;
   position: absolute;
   z-index: 2;
@@ -20,21 +20,10 @@ html, body {
 
 /*Main Image, input and button*/
 
-
-#right {
-  float:right;
-  border: #000000 solid 1px;
-}
-
-#left {
-  float: left;
-  border: #000000 solid 1px;
-}
-
 .title {
-  width: 200px;
-  text-align: left;
+  width: 100%;
   position: fixed;
+  margin-left: 15px;
 }
 
 label {
@@ -43,19 +32,17 @@ label {
   font-weight: 700;
   font-size: 50px;
   color: #FFFFE1;
-  top: 100px;
-  padding-left: 20px;
 }
 
 .input {
   display: block;
-  margin-top: 450px;
-  margin-left: 50px;
+  float: right;
 }
 
 select {
+  display: flex;
+
   align-items: center;
-  margin-left: -5px;
   height: 100px;
   width: 300px;
   font-size: 30px;
@@ -70,14 +57,11 @@ select {
   border: #10B355;
   height: 100px;
   width: 200px;
-  margin-top: 20px;
-  margin-left: 40px;
 }
 
 #gobtn:hover {
   background-color: #10B355;
 }
-
 
 .input2 {
   display: block;
@@ -94,8 +78,6 @@ select {
   border: #10B355;
   height: 100px;
   width: 200px;
-  margin-top: 20px;
-  margin-left: 40px;
 }
 
 #gobtn2:hover {
@@ -103,18 +85,16 @@ select {
 }
 
 #doggoimgs img {
-  /*display: block;*/
-  right: 20px;
+  display: block;
   padding-top: 0px;
-  /*margin: 0;*/
-  /*position:absolute;*/
-  /*padding-left: 0px;*/
+  margin: 0;
+  position: absolute;
+  padding-left: 0px
 }
 
 #doggoimgs img.topdoggoimg:hover {
   opacity:0;
   padding-top: 5px;
-  right: 20px;
 }
 
 #instafeed {
@@ -135,11 +115,9 @@ select {
 
   #doggoimgs img {
     display: block;
-    width: 40%;
+    width: 50%;
     margin: 0;
     position:absolute;
-    padding-left: 50px;
-    /*padding-top: 50px;*/
   }
 
   label {
