@@ -4,6 +4,24 @@ html, body {
   overflow-x: hidden;
 }
 
+p {
+  text-align: center;
+  font-size: 16px;
+  color: #F5B2D3;
+  font-family: 'Playfair Display', serif;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0px;
+}
+
+a {
+  color: #F5B2D3;
+}
+
 .hide {
   display: none;
 }
@@ -18,78 +36,181 @@ html, body {
   background-color: #FBCEE5
 }
 
-/*Main Image, input and button*/
+/*Main Image, input and button --> for mobile, this should be stacked title, image and button*/
+
+
+.glitch {
+  z-index: 5;
+  text-align: center;
+  margin: 0;
+  font-size: 40px;
+
+  position: relative;
+  top: 40%;
+  color: #373737;
+  font-family: 'Playfair Display', serif;
+}
+
+.glitch:before, .glitch:after {
+  content: 'THE LIFE OF';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow:hidden;
+  background-color: #FBCEE5;
+  color: #373737;
+}
+
+.glitch:before{
+  left: -4px;
+  text-shadow: 2px 0 #11DF57;
+  animation: effect 3s infinite linear;
+}
+.glitch:after{
+  left: -2px;
+  text-shadow: -2px 0 #AED581;
+  animation: effect 2s infinite linear;
+}
+
+@-webkit-keyframes effect {
+  0%{
+      clip:rect(55px,9999px,56px,0);
+  }
+  5%{
+      clip:rect(47px,9999px,30px,0);
+  }
+  10%{
+      clip:rect(33px,9999px,36px,0);
+  }
+  15%{
+      clip:rect(35px,9999px,9px,0);
+  }
+  20%{
+      clip:rect(63px,9999px,59px,0);
+  }
+  25%{
+      clip:rect(96px,9999px,98px,0);
+  }
+  30%{
+      clip:rect(48px,9999px,77px,0);
+  }
+  35%{
+      clip:rect(50px,9999px,34px,0);
+  }
+  40%{
+      clip:rect(60px,9999px,72px,0);
+  }
+  45%{
+      clip:rect(10px,9999px,81px,0);
+  }
+  50%{
+      clip:rect(2px,9999px,60px,0);
+  }
+  55%{
+      clip:rect(23px,9999px,89px,0);
+  }
+  60%{
+      clip:rect(76px,9999px,91px,0);
+  }
+  65%{
+      clip:rect(62px,9999px,30px,0);
+  }
+  70%{
+      clip:rect(60px,9999px,73px,0);
+  }
+  75%{
+      clip:rect(60px,9999px,87px,0);
+  }
+  80%{
+      clip:rect(2px,9999px,14px,0);
+  }
+  85%{
+      clip:rect(28px,9999px,87px,0);
+  }
+  90%{
+      clip:rect(73px,9999px,50px,0);
+  }
+  95%{
+      clip:rect(79px,9999px,70px,0);
+  }
+  100%{
+      clip:rect(17px,9999px,79px,0);
+  }
+}
 
 .title {
-  width: 100%;
-  position: fixed;
-  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
 }
 
-label {
-  z-index: 5;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 50px;
-  color: #FFFFE1;
-}
-
-.input {
-  display: block;
-  float: right;
+#input {
+  display: flex;
+  justify-content: center;
+  padding-top: 330px;
 }
 
 select {
   display: flex;
-
-  align-items: center;
-  height: 100px;
-  width: 300px;
+  height: 50px;
+  width: 150px;
   font-size: 30px;
   font-family: 'Playfair Display', serif;
+  margin-top: 5px;
 }
 
 #gobtn {
-  font-family: 'Playfair Display:700', serif;
-  font-size: 30px;
+/*text style*/
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
 
-  background-color: #11DF57;
+/*button style*/
+  background-color: #FBCEE5;
   border: #10B355;
-  height: 100px;
-  width: 200px;
+  height: 50px;
+  width: 100px;
+  margin-top: 5px;
+
+/*interaction*/
+  cursor: pointer;
 }
 
 #gobtn:hover {
-  background-color: #10B355;
-}
-
-.input2 {
-  display: block;
-  margin-top: 20px;
-  margin-left: 50px;
-  margin-bottom: 50px;
+  background-color: #11DF57;
+  color: #fff;
 }
 
 #gobtn2 {
-  font-family: 'Playfair Display:700', serif;
-  font-size: 30px;
+/*text style*/
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
 
-  background-color: #11DF57;
+/*button style*/
+  background-color: #FBCEE5;
   border: #10B355;
-  height: 100px;
-  width: 200px;
+  height: 50px;
+  width: 100%;
+  margin-top: 330px;
+
+/*interaction*/
+  cursor: pointer;
 }
 
 #gobtn2:hover {
-  background-color: #10B355;
+  background-color: #11DF57;
+  color: #fff;
 }
 
-#doggoimgs img {
-  display: block;
-  padding-top: 0px;
-  margin: 0;
+#doggoimgs {
+  display: flex;
+  justify-content: center;
+  padding-top: 90px;
+}
+
+img {
+  width: 80%;
   position: absolute;
-  padding-left: 0px
 }
 
 #doggoimgs img.topdoggoimg:hover {
@@ -98,59 +219,114 @@ select {
 }
 
 #instafeed {
-  margin-top: 50px;
+  margin-top: 18px;
+  margin-left: 25px;
   background-color: #FBCEE5;
   top:-100vh;
   max-width: 100%;
   overflow-x: hidden;
-  padding-left: 50px;
-  padding-right: 0px;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 50px;
-  margin-top: 50px;
 }
 
+/*iPad*/
+@media (min-width: 1024px) {
+
+  #overlay {
+    height: 100%;
+  }
+
+  img {
+    width: 30%;
+    position: absolute;
+  }
+
+  #input {
+    padding-top: 380px;
+  }
+
+  #gobtn2 {
+    margin-top: 400px;
+  }
+
+  #instafeed {
+    display: flex;
+    justify-content: center;
+    margin-left: -180px;
+  }
+
+}
+
+/*Laptop*/
+@media (min-width: 1240px) {
+  #overlay {
+    height: 100%;
+  }
+
+  img {
+    width: 30%;
+    position: absolute;
+  }
+
+  #input {
+    padding-top: 380px;
+  }
+
+  #gobtn2 {
+    margin-top: 400px;
+  }
+
+  #instafeed {
+    display: flex;
+    justify-content: center;
+    margin-left: -180px;
+  }
+}
+
+/*Laptop*/
 @media (min-width: 1440px) {
 
-  #doggoimgs img {
-    display: block;
-    width: 50%;
-    margin: 0;
-    position:absolute;
+  #input {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 150px;
+    padding-top: 330px;
   }
 
-  label {
-    z-index: 5;
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 70px;
-    color: #FFFFE1;
-    top: 100px;
-    padding-left: 20px;
-    width: 400px;
+  #gobtn2 {
+  float: right;
+  width: 50%;
   }
 
-  .input {
-    float: right;
-    margin-top: 40px;
-    margin-right: 100px;
+  p {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 150px;
   }
 
-  select {
-    align-items: center;
-    margin-left: 20px;
-    height: 100px;
-    width: 400px;
-    font-size: 40px;
-    font-family: 'Playfair Display', serif;
+  img {
+    margin-left: 30px;
+    width: 45%;
+    position: absolute;
   }
 
-  #gobtn {
-    z-index: 7;
-    background-color: #11DF57;
-    border: #10B355;
-    height: 100px;
-    width: 200px;
+  #doggoimgs {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 90px;
   }
+
+  #instafeed {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 18px;
+    margin-left: 25px;
+    background-color: #FBCEE5;
+    top:-100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 700px;
 }

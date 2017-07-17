@@ -9,10 +9,16 @@
     <meta name="author" content="Aprile Bansil">
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&effect=anaglyph" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
   <header>
+
+  <div class="title">
+    <h1 class="glitch">THE LIFE OF</h1>
+  </div>
+
 
   <div id="overlay">
 
@@ -21,15 +27,8 @@
         <img class="topdoggoimg" src="images/corgiheader.png" alt="doggo">
       </div>
 
+      <div id="input">
 
-
-
-
-      <div class="title">
-          <label class="font-effect-anaglyph" for="the-life-of">THE LIFE OF</label>
-      </div>
-
-          <div class="input">
             <select name="doggo-type">
               <option value="doggo">doggo</option>
               <option value="dog">dog</option>
@@ -37,25 +36,29 @@
               <option value="dawg">dawg</option>
             </select>
 
-            <button id="gobtn" type="button" name="button">GO</button>
+            <button id="gobtn">GO</button>
 
-          </div>
-    </div>
+      </div>
+
+  </div>
 
 
-  <div id="instafeed"></div>
-    <script src="js/instafeed.min.js"></script>
-    <script type="text/javascript">
-      var Feed = new Instafeed({
-        get: 'tagged',
-        tagName: 'corgi',
-        userId: '2066156089',
-        accessToken: '193611173.ba4c844.abff80f8fa474321aa2c7a9fa4ba6969',
-        sortBy: 'most-recent',
-        limit: '24'
-      });
-      Feed.run();
-    </script>
+  <div id="instafeed">
+          <script src="js/instafeed.min.js"></script>
+          <script type="text/javascript">
+            var Feed = new Instafeed({
+              get: 'tagged',
+              tagName: 'puppy',
+              userId: '2066156089',
+              accessToken: '193611173.ba4c844.abff80f8fa474321aa2c7a9fa4ba6969',
+              sortBy: 'most-recent',
+              limit: '24'
+            });
+            Feed.run();
+          </script>
+  </div>
+
+<button id="gobtn2">GO BACK</button>
 
 
 <script
@@ -64,6 +67,19 @@
   crossorigin="anonymous"></script>
   <script src="js/instafeed.min.js"></script>
 <script src="js/script.js"></script>
+
+<footer>
+  <ul>
+    <li>
+      <a href="https://twitter.com" target="_blank">
+      <i class="fa fa-fw fa-twitter" style="font-size:36px;" aria-hidden="true"></i></a>
+    </li>
+    <li>
+      <a  href="https://instagram.com" target="_blank">
+      <i class="fa fa-fw fa-instagram" style="font-size:36px;" aria-hidden="true"></i></a>
+    </li>
+  </ul>
+</footer>
 
 </header>
 </body>
